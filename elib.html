@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title >Vedantha Junior College</title>
+    <script>
+        function showSection(sectionId) {
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => section.classList.add('hidden'));
+        document.getElementById(sectionId).classList.remove('hidden');
+    }
+
+    function toggleOptions(id) {
+        const options = document.getElementById(id);
+        options.classList.toggle('hidden');
+    }
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            menu.classList.toggle("hidden");
+            if (menu.classList.contains("hidden")) {
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            } else {
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+            }
+        }
+
+        document.addEventListener("click", function(event) {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.add("hidden");
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            }
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Latest News Bar -->
+    <div class="bg-yellow-500 text-black text-sm py-1 px-4">
+        <marquee> BELIEVE IN VEDANTHA: To Shape Up the Future Torch Bearers </marquee>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white">
+        <div class="container mx-auto flex flex-col items-center py-4">
+            <div class="flex items-center space-x-4">
+                <img alt="College Logo" class="h-20 w-20 rounded mr-4" src="vedlogo.jpg"/>
+                <div class="text-center">
+                    <h1 class="text-2xl font-bold">VEDANTHA JUNIOR COLLEGE</h1>
+                    <h2 class="text-xl font-bold">IIT-NEET Academy</h2>
+                    <p class="text-sm">Church Street, Parvathipuram-535501. (R.C. No.03073/C24/Academic/2020) College Code: 03073</p>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-blue-800 text-white p-4 flex justify-between items-center relative">
+        <div class="flex space-x-4 text-sm">
+            <a class="hover:underline" href="index.html">ABOUT US</a>
+            <a class="hover:underline" href="faculty.html">FACULTY</a>
+            <a class="hover:underline" href="admission.html">ADMISSIONS</a>
+            <a class="hover:underline" href="gallery.html">GALLERY</a>
+            <a class="hover:underline" href="alumni.html">ALUMNI</a>
+        </div>
+
+        <!-- Hamburger / Close Menu Icon -->
+        <i id="menu-icon" class="fa fa-bars text-2xl cursor-pointer" onclick="toggleMenu()"></i>
+    </nav>
+
+    <!-- Dropdown Menu -->
+    <ul id="menu" class="hidden absolute right-4  bg-blue-800 text-white w-40 mt-2 py-2 shadow-md text-center rounded-lg">
+        <li class="p-3 hover:bg-gray-600"><a href="gallery.html">Gallery</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="elib.html">E-Library</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="events.html">Events</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="features.html">Features</a></li>
+        
+    </ul>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</body>
+
+<body class="bg-gray-100 dark:bg-gray-900 p-6">
+    <div class="max-w-7xl mx-auto">
+        <center>
+        <h1 class="text-3xl font-bold mb-2 text-gray-900 dark:text-blue-600">Vedantha E-Library</h1>
+        <p class="text-gray-600 dark:text-yellow-500 mb-6">A comprehensive collection of content</p>
+        </center>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-4">
+            <div class="flex justify-center space-x-4 mb-4 mt-4">
+               
+                <button class="tab-btn bg-yellow-500 text-white font-bold py-2 px-4 rounded" onclick="showSection('eapcet')">EAPCET</button>
+                <button class="tab-btn bg-yellow-500 text-white font-bold py-2 px-4 rounded" onclick="showSection('ipe')">IPE</button>
+            </div>
+            
+            
+            <div id="eapcet" class="content-section">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                        <a href="#">
+                        <img class="mx-auto mb-2 w-32 h-32 object-cover" src="img/mat.jpg" alt="Maths"onclick="toggleOptions('emaths-options')"/>
+                        <p class="font-bold">Maths</p>
+                        <div id="emaths-options" class="options hidden mt-2">
+                            <a href="pdfs/mathb.pdf" target="_blank" class="block text-blue-500">Maths Reference Handbook</a>
+                            <a href="pdfs/emaths_previous.pdf" target="_blank" class="block text-blue-500">Previous Papers</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                        <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/phy.jpg" alt="Physics" onclick="toggleOptions('ephy-options')"/>
+                        <p class="font-bold">Physics</p>
+                        <div id="ephy-options" class="options hidden mt-2">
+                            <a href="pdfs/phyhb.pdf" target="_blank" class="block text-blue-500">Physics Reference HandBook</a>
+                            <a href="pdfs/ephysics_previous.pdf" target="_blank" class="block text-blue-500">Previous Papers</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                        <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/chem.jpg" alt="Chemistry" onclick="toggleOptions('echem-options')"/>
+                        <p class="font-bold">Chemistry</p>
+                        <div id="echem-options" class="options hidden mt-2">
+                            <a href="pdfs/chemhb.pdf" target="_blank" class="block text-blue-500">Chemistry Reference HandBook</a>
+                            <a href="pdfs/echemistry_previous.pdf" target="_blank" class="block text-blue-500">Previous Papers</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                        <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/botany.jpg" alt="Botany" onclick="toggleOptions('ebotany-options')"/>
+                        <p class="font-bold">Botany</p>
+                        <div id="ebotany-options" class="options hidden mt-2">
+                            <a href="pdfs/bhb.pdf" target="_blank" class="block text-blue-500">Botany Reference HandBook</a>
+                            <a href="pdfs/ebotany_previous.pdf" target="_blank" class="block text-blue-500">Previous Papers</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                        <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/zoo.jpg" alt="Zoology"onclick="toggleOptions('ezoo-options')"/>
+                        <p class="font-bold">Zoology</p>
+                        <div id="ezoo-options" class="options hidden mt-2">
+                            <a href="pdfs/bhb.pdf" target="_blank" class="block text-blue-500">Zoology Reference HandBook</a>
+                            <a href="pdfs/ezoo_previous.pdf" target="_blank" class="block text-blue-500">Previous Papers</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ipe" class="content-section hidden">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                        <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/eng.jpg" alt="English"onclick="toggleOptions('ieng-options')"/>
+                        <p class="font-bold">English</p>
+                        <div id="ieng-options" class="options hidden mt-2">
+                            <a href="pdfs/engtb1.pdf" target="_blank" class="block text-blue-500">English 1st Year Material</a>
+                            <a href="pdfs/engtb1.pdf" target="_blank" class="block text-blue-500">English 2nd Year Material</a>
+                            <a href="pdfs/engpp1.pdf" target="_blank" class="block text-blue-500">English-I Model Paper</a>
+                            <a href="pdfs/engpp2.pdf" target="_blank" class="block text-blue-500">English-II Model Paper</a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                        <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/san.jpg" alt="Sanskrit"onclick="toggleOptions('isan-options')"/>
+                        <p class="font-bold">Sanskrit</p>
+                        <div id="isan-options" class="options hidden mt-2">
+                            <a href="pdfs/santb2.pdf" target="_blank" class="block text-blue-500">Sanskrit Material</a>
+                            <a href="pdfs/sanpp1.pdf" target="_blank" class="block text-blue-500">Sanskrit -I Model Paper</a>
+                            <a href="pdfs/sanpp2.pdf" target="_blank" class="block text-blue-500">Sanskrit -II Model Paper</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                        <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/mat.jpg" alt="Maths"onclick="toggleOptions('imaths-options')"/>
+                         <p class="font-bold">Maths</p>
+                            <div id="imaths-options" class="options hidden mt-2">
+                                <a href="pdfs/mat1a.pdf" target="_blank" class="block text-blue-500">Maths 1A TextBook</a>
+                                <a href="pdfs/mat1b.pdf" target="_blank" class="block text-blue-500">Maths 1B TextBook</a>
+                                <a href="pdfs/mat2a.pdf" target="_blank" class="block text-blue-500">Maths 2A TextBook</a>
+                                <a href="pdfs/mat2b.pdf" target="_blank" class="block text-blue-500">Maths 2B TextBook</a>
+                                <a href="pdfs/mat1app1.pdf" target="_blank" class="block text-blue-500">Maths -1A Model Paper</a>
+                                <a href="pdfs/mat1bpp1.pdf" target="_blank" class="block text-blue-500">Maths -1B Model Paper</a>
+                                <a href="pdfs/mat2app2.pdf" target="_blank" class="block text-blue-500">Maths -2A Model Paper</a>
+                                <a href="pdfs/mat2bpp2.pdf" target="_blank" class="block text-blue-500">Maths -2B Model Paper</a>
+                            </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                            <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/phy.jpg" alt="Physics" onclick="toggleOptions('iphy-options')"/>
+                            <p class="font-bold">Physics</p>
+                            <div id="iphy-options" class="options hidden mt-2">
+                                <a href="pdfs/phytb1.pdf" target="_blank" class="block text-blue-500">Physics 1st Year Material</a>
+                                <a href="pdfs/phytb2.pdf" target="_blank" class="block text-blue-500">Physics 2nd Year Material</a>
+                                <a href="pdfs/phypp1.pdf" target="_blank" class="block text-blue-500">Phyics-I Model Paper</a>
+                                <a href="pdfs/phypp2.pdf" target="_blank" class="block text-blue-500">Phyics-II Model Paper</a>
+                            </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                            <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/chem.jpg" alt="Chemistry" onclick="toggleOptions('ichem-options')"/>
+                            <p class="font-bold">Chemistry</p>
+                            <div id="ichem-options" class="options hidden mt-2">
+                                <a href="pdfs/chemtb1.pdf" target="_blank" class="block text-blue-500">Chem 1st Year TextBook</a>
+                                <a href="pdfs/chemtb2.pdf" target="_blank" class="block text-blue-500">Chem 2nd Year TextBook</a>
+                                <a href="pdfs/chempp1.pdf" target="_blank" class="block text-blue-500">Chemistry-I Model Paper</a>
+                                <a href="pdfs/chempp2.pdf" target="_blank" class="block text-blue-500">Chemistry-II Model Paper</a>
+                            </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                            <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/botany.jpg" alt="Botany" onclick="toggleOptions('ibotany-options')"/>
+                            <p class="font-bold">Botany</p>
+                            <div id="ibotany-options" class="options hidden mt-2">
+                                <a href="pdfs/bottb1.pdf" target="_blank" class="block text-blue-500">Botany 1st Year TextBook</a>
+                                <a href="pdfs/bott2b.pdf" target="_blank" class="block text-blue-500">Botany 2nd Year TextBook</a>
+                                <a href="pdfs/botpp1.pdf" target="_blank" class="block text-blue-500">Botany-I Model Paper</a>
+                                <a href="pdfs/botpp2.pdf" target="_blank" class="block text-blue-500">Botany-II Model Paper</a>
+
+                                
+                            </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center">
+                            <img class="mx-auto mb-2 w-32 h-32 object-cover cursor-pointer" src="img/zoo.jpg" alt="Zoology"onclick="toggleOptions('izoo-options')"/>
+                            <p class="font-bold">Zoology</p>
+                            <div id="izoo-options" class="options hidden mt-2">
+                                <a href="pdfs/zootb1.pdf" target="_blank" class="block text-blue-500">Zoology 1st Year TextBook</a>
+                                <a href="pdfs/zootb2.pdf" target="_blank" class="block text-blue-500">Zoology 2nd Year TextBook</a>
+                                <a href="pdfs/zoopp1.pdf" target="_blank" class="block text-blue-500">Zoology-I Model Paper</a>
+                                <a href="pdfs/zoopp2.pdf" target="_blank" class="block text-blue-500">Zoology-II Model Paper</a>
+
+                                
+                            </div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+            
+        
+    </div>
+</body>
+</html>

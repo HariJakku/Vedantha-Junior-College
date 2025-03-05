@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title >Vedantha Junior College</title>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            menu.classList.toggle("hidden");
+            if (menu.classList.contains("hidden")) {
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            } else {
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+            }
+        }
+        
+
+        document.addEventListener("click", function(event) {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.add("hidden");
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            }
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/framer-motion@4.1.17/dist/framer-motion.umd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+</head>
+<body class="bg-gray-100">
+
+    <!-- Latest News Bar -->
+    <div class="bg-yellow-500 text-black text-sm py-1 px-4">
+        <marquee> BELIEVE IN VEDANTHA: To Shape Up the Future Torch Bearers </marquee>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white">
+        <div class="container mx-auto flex flex-col items-center py-4">
+            <div class="flex items-center space-x-4">
+                <img alt="College Logo" class="h-20 w-20 rounded mr-4" src="vedlogo.jpg"/>
+                <div class="text-center">
+                    <h1 class="text-2xl font-bold">VEDANTHA JUNIOR COLLEGE</h1>
+                    <h2 class="text-xl font-bold">IIT-NEET Academy</h2>
+                    <p class="text-sm">Church Street, Parvathipuram-535501. (R.C. No.ESE51-13021/45/2021-C) College Code: 03073</p>
+                </div>
+                <img alt="College Logo" class="h-20 w-20 right-4 rounded mr-4" src="vedlogo.jpg"/>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-blue-800 text-white p-4 flex justify-between items-center relative">
+        <div class="flex space-x-4 text-sm">
+            <a class="hover:underline" href="index.html">ABOUT US</a>
+            <a class="hover:underline" href="faculty.html">FACULTY</a>
+            <a class="hover:underline" href="admission.html">ADMISSIONS</a>
+            <a class="hover:underline" href="gallery.html">GALLERY</a>
+            <a class="hover:underline" href="alumni.html">ALUMNI</a>
+        </div>
+
+        <!-- Hamburger / Close Menu Icon -->
+        <i id="menu-icon" class="fa fa-bars text-2xl cursor-pointer" onclick="toggleMenu()"></i>
+    </nav>
+
+    <!-- Dropdown Menu -->
+    <ul id="menu" class="hidden absolute right-4  bg-blue-800 text-white w-40 mt-2 py-2 shadow-md text-center rounded-lg">
+        <li class="p-3 hover:bg-gray-600"><a href="gallery.html">Gallery</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="elib.html">E-Library</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="events.html">Events</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="features.html">Features</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="#"></a></li>
+    </ul>
+
+    
+  <!-- Main Content -->
+<body >
+  <main class="container mx-auto py-8 px-6">
+    <section class="flex flex-col lg:flex-row">
+        <div class="lg:w-3/3 lg:pl-8">
+            <h1  data-aos="fade-out"class="text-3xl font-bold text-yellow-500 mb-2">
+            ABOUT US
+           </h1>
+           <h2  data-aos="fade-out"class="text-2xl font-bold text-blue-900 mb-4">
+            Why Vedantha?
+           </h2>
+           <p  data-aos="fade-in" class="text-gray-700 mb-4">
+               Vedantha Junior College, Parvathipuram is a distinguished educational institution dedicated to nurturing young minds with quality education and strong ethical values.
+                Established with a vision to provide a holistic learning experience, the college offers Intermediate programs in Science and Commerce streams, equipping students with knowledge, skills, and career-oriented training.
+
+               With experienced faculty, well-equipped classrooms, and a student-centric approach, Vedantha Junior College fosters academic excellence, discipline, and leadership. 
+               The college integrates modern teaching methodologies, practical learning, and extracurricular activities to ensure overall student development.
+
+               Vedantha Junior College is not just about education—it's about building a strong foundation for success and lifelong learning. 🚀📚
+          </p>
+    </div>
+    </section>
+    </main>
+    <!--Cheif Mentor Message-->
+    <main class="container mx-auto py-8 px-6">
+        <section class="flex flex-col lg:flex-row">
+            <div class="lg:w-1/3 flex flex-col items-center lg:items-start">
+    
+        <img data-aos="zoom-in" alt="Portrait " class="mb-4" height="400" src="apparao.jpg" width="200"/>
+      <div class="flex space-x-2 mb-4">
+       <button class="bg-green-500 w-5 h-5 rounded-full">
+       </button>
+       <button class="bg-yellow-500 w-5 h-5 rounded-full">
+       </button>
+       <button class="bg-blue-500 w-5 h-5 rounded-full">
+       </button>
+       <button class="bg-green-500 w-5 h-5 rounded-full">
+     </button>
+     <button class="bg-yellow-500 w-5 h-5 rounded-full">
+     </button>
+     <button class="bg-blue-500 w-5 h-5 rounded-full">
+     </button>
+      </div>
+     </div>
+     <div class="lg:w-2/3 lg:pl-8">
+      <h1  data-aos="fade-out"class="text-3xl font-bold text-yellow-500 mb-2">
+       Cheif Mentors Message
+      </h1>
+      <h2 data-aos="fade-out" class="text-2xl font-bold text-blue-900 mb-4">
+       Dr. Penta Apparao
+      </h2>
+      <p  data-aos="fade-in"class="text-gray-700 mb-4">
+         As a person from a low middle-class family I would like to
+         do
+         something to
+         my
+         area students who wished to
+         get
+         quality education. Unfortunately, they are not financially strong enough to join in corporate colleges in
+         and
+         around Visakhapatnam. For this we established an educational society named on PENTA SOBHA SRI MEMORIAL
+         EDUCTIONAL SOCIETY in 2020
+     </p>
+     </div>
+     
+    </section>
+    <br>
+    <!--Director Message-->
+    <main class="container mx-auto py-8 px-6">
+     <section class="flex flex-col lg:flex-row">
+      <div class="lg:w-1/3 flex flex-col items-center lg:items-start">
+       <img data-aos="zoom-in" alt="Portrait " class="mb-4" height="400" src="sln.jpg" border-radius= 5px; width="200"/>
+       <div class="flex space-x-2 mb-4">
+         <button class="bg-green-500 w-5 h-5 rounded-full">
+         </button>
+         <button class="bg-yellow-500 w-5 h-5 rounded-full">
+         </button>
+         <button class="bg-blue-500 w-5 h-5 rounded-full">
+         </button>
+         <button class="bg-green-500 w-5 h-5 rounded-full">
+       </button>
+       <button class="bg-yellow-500 w-5 h-5 rounded-full">
+       </button>
+       <button class="bg-blue-500 w-5 h-5 rounded-full">
+       </button>
+       </div>
+       
+      </div>
+      <div class="lg:w-2/3 lg:pl-8">
+       <h1  data-aos="fade-out" class="text-3xl font-bold text-yellow-500 mb-2">
+        Director Message
+       </h1>
+       <h2  data-aos="fade-out"class="text-2xl font-bold text-blue-900 mb-4">
+         Shri Sristu Lakshmu Naidu</h2>
+       <p  data-aos="fade-in" class="text-gray-700 mb-4">
+         At our institution, we believe in fostering curiosity, creativity, and perseverance.
+          I encourage each of you to stay dedicated, work hard, and never stop believing in your potential. 
+          Your dreams are within reach, and with determination and discipline, you can achieve greatness.
+ 
+         Remember, success is not defined by how fast you reach your goals but by the consistency and effort you put in every single day.
+          Take advantage of the opportunities provided, engage actively in learning, and always strive for excellence.
+      </p>
+      </div>
+      
+     </section>
+     <!--VISON MISSION-->
+    <section class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+     <div class="flex flex-col items-center lg:items-start">
+      <img data-aos="zoom-in" alt="Graduation cap icon" class="mb-2" height="50" src="https://storage.googleapis.com/a1aa/image/D6_76SKAk4QgR-DCoNyveHxqGThDOtMwcU88H-bQ9fU.jpg" width="50"/>
+      <h3  data-aos="fade-out" class="text-xl font-bold text-blue-900 mb-2">
+       Vision
+      </h3>
+      <p  data-aos="fade-in" class="text-gray-700 text-center lg:text-left">
+         To be a center of academic excellence that empowers students with knowledge, skills, and values for a successful future. 
+         We strive to foster innovation, creativity, and leadership qualities in our students.
+         With a commitment to holistic education, we shape young minds for global challenges.
+      </p>
+     </div>
+     <div class="flex flex-col items-center lg:items-start">
+      <img data-aos="zoom-in" alt="Star icon" class="mb-2" height="50" width="50" src="https://storage.googleapis.com/a1aa/image/jhhhMX3g174kAhpzRHpQmpZMj7Six7N58CxE3Y686Qw.jpg" width="50"/>
+      <h3   data-aos="fade-out" class="text-xl font-bold text-blue-900 mb-2">
+       Mission
+      </h3>
+      <p  data-aos="fade-in" class="text-gray-700 text-center lg:text-left">
+         To provide a dynamic and inclusive learning environment that promotes intellectual growth and ethical values.
+          We focus on  critical thinking, and career readiness through quality education.
+          
+          Our mission is to create confident, responsible, and capable individuals.
+      </p>
+     </div>
+     
+    </section>
+   </main>
+   <script>
+    AOS.init({
+        duration: 1800, 
+        easing: "ease-in-out",
+        once: true
+    });
+  </script>
+
+</body>
+   <!--Track Record-->
+   <div class="container mx-auto mt-8">
+    <h1 class="text-3xl font-bold text-yellow-500 mb-2">
+     Track Record of Vedantha
+    </h1>
+    </div>
+   <div class="bg-grey-100 py-8">
+    <div class="container mx-auto">
+     <div class="grid grid-cols-1 md:grid-cols-5 gap-2">
+      <div class="relative">
+       <img alt="Campus building with a dome" class="w-150 h-130 object-cover" height="130" src="vedlogo.jpg" width="150"/>
+       
+      </div>
+      <div class="bg-white p-4 text-center">
+       <div class="text-4xl font-bold text-blue-900">
+        16+
+       </div>
+       <div class="text-gray-600">
+        Vedantians in IIT & NIT Institutions
+       </div>
+      </div>
+      <div class="bg-white p-4 text-center">
+         <div class="text-4xl font-bold text-blue-900">
+          2
+         </div>
+         <div class="text-gray-600">
+            Vedantians in NEET
+         </div>
+        </div>
+      <div class="bg-white p-4 text-center">
+       <div class="text-4xl font-bold text-blue-900">
+        280+
+       </div>
+       <div class="text-gray-600">
+        Vedantians in Top Eapcet Institutions
+       </div>
+      </div>
+      <div class="bg-white p-4 text-center">
+       <div class="text-4xl font-bold text-blue-900">
+        2000+
+       </div>
+       <div class="text-gray-600">
+        Students Till Now
+       </div>
+      </div>
+      
+     </div>
+    </div>
+   </div>
+   
+   
+ 
+  
+   <!--Gallery Section-->
+ 
+   <body class="bg-gray-100">
+  
+  <div class="container mx-auto mt-8">
+   <h1 class="text-3xl font-bold text-yellow-500 mb-2">
+    
+   </h1>
+   </div>
+   <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-8">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <style>
+            /* Basic reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            
+    
+            .slider {
+                width: 100%;
+                /* Set to 100% for responsive behavior */
+                max-width: 850px;
+                max-height: 1000px;
+                /* Optional: max width */
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                margin: auto;
+                /* Center the slider */
+                position: relative;
+                /* Position relative for absolute buttons */
+            }
+    
+            .slides {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                /* Smooth transition */
+            }
+    
+            .slide {
+                width: 100%;
+                /* Each slide takes full width */
+                flex-shrink: 0;
+            }
+    
+            .slide img {
+                width: 100%;
+                /* Set to 100% for responsive behavior */
+                height: auto;
+                /* Maintain aspect ratio */
+                max-height: 400px;
+                /* Limit max height to fit the screen */
+                display: block;
+                border-radius: 10px;
+            }
+    
+            .button-container {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-50%);
+            }
+    
+            .prev,
+            .next {
+                
+                border: none;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 50%;
+                user-select: none;
+                transition: background-color 0.3s;
+                font-size: 30px;
+                /* Increase size of symbols */
+            }
+    
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(83, 4, 119, 1);
+            }
+    
+            .back-button {
+                
+                border-radius: 10px;
+                width: 150px;
+                height: 50px;
+                border: none;
+                color: white;
+                cursor: pointer;
+            }
+    
+            .button:hover {
+                background-color: gray;
+                color: white;
+            }
+    
+            
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="slider">
+            <div class="slides">
+                
+                <div class="slide"><img src="img/gmo1.jpeg" alt="Image 1"></div>
+                <div class="slide"><img src="img/vcol11.jpeg" alt="Image 1"></div>
+                <div class="slide"><img src="img/vf33.JPG" alt="Image 2"></div>
+                <div class="slide"><img src="img/vcul6.JPG" alt="Image 3"></div>
+                <div class="slide"><img src="img/vf2.jpg" alt="Image 7"></div>
+                <div class="slide"><img src="img/vcul1.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="img/va2.jpg" alt="Image 5"></div>
+                <div class="slide"><img src="img/gmo333.jpeg" alt="Image 6"></div>
+                
+                <div class="slide"><img src="img/vcol6.jpg" alt="Image 8"></div>
+                <div class="slide"><img src="img/vf1.jpg" alt="Image 9"></div>
+                <div class="slide"><img src="img/p9.jpg" alt="Image 10"></div>
+                <div class="slide"><img src="img/vh1.jpg" alt="Image 10"></div>
+    
+            </div>
+            <div class="button-container">
+                <button class="prev" onclick="moveSlide(-1)">&lt;</button> <!-- Left arrow -->
+                <button class="next" onclick="moveSlide(1)">&gt;</button> <!-- Right arrow -->
+            </div>
+        </div>
+    
+        
+    
+    
+        <script>
+            let currentIndex = 0; // Current slide index
+            const slides = document.querySelectorAll('.slide'); // Get all slides
+            const totalSlides = slides.length; // Total number of slides
+            let autoSlideInterval; // Variable to hold the auto slide interval
+    
+            // Function to show the current slide
+            function showSlide(index) {
+                const slideContainer = document.querySelector('.slides');
+                slideContainer.style.transform = `translateX(-${index * 100}%)`; // Move the slide container
+            }
+    
+            // Function to go to the next slide
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides; // Move to the next slide
+                showSlide(currentIndex);
+            }
+    
+            // Function to go to the previous slide
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Move to the previous slide
+                showSlide(currentIndex);
+            }
+    
+            // Function to move the slide based on button click
+            function moveSlide(direction) {
+                clearInterval(autoSlideInterval); // Stop auto sliding when manual control is used
+                if (direction === 1) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+                startAutoSlide(); // Restart auto sliding
+            }
+    
+            // Set interval to change slides every 3 seconds
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3000ms (3 seconds)
+            }
+    
+            // Start auto slide on page load
+            document.addEventListener('DOMContentLoaded', () => {
+                startAutoSlide();
+            });
+        </script>
+    
+   </div>
+  </div>
+  
+ </body>
+</html>
+<br>
+
+<br>
+<!--TRACK RECORD-->
+
+
+
+
+   <!-- Bottom Section -->
+   <html lang="en">
+    <head>
+     <meta charset="utf-8"/>
+     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+     <title>
+      Footer Section
+     </title>
+     <script src="https://cdn.tailwindcss.com">
+     </script>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    </head>
+    <body class="bg-gray-100">
+     <footer class="bg-blue-900 text-white py-8">
+      <div class="container mx-auto px-4">
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Quick Links -->
+        <div>
+         <h2 class="text-yellow-400 text-xl font-bold mb-4">
+          Quick Links
+         </h2>
+         <ul class="space-y-2">
+          <li>
+           <a class="text-white" href="index.html">
+            Home
+           </a>
+          </li>
+          <li>
+           <a class="text-white" href="faculty.html">
+            Faculty
+           </a>
+          </li>
+          <li>
+           <a class="text-white" href="admission.html">
+            Admissions
+           </a>
+          </li>
+          <li>
+           <a class="text-white" href="elib.html">
+             E-Library
+           </a>
+          </li>
+          
+         </ul>
+        </div>
+        <!-- Contact Us -->
+        <div>
+         <h2 class="text-yellow-400 text-xl font-bold mb-4">
+          Contact us
+         </h2>
+         <p class="text-white mb-2">
+          Vedantha Junior College,Church Street Parvathipuram Manyam.
+         </p>
+         <p class="text-white mb-2">
+          8919406296 | 9505533067 | 8498813113
+         </p>
+         
+         <p class="text-white">
+          vedanthajuniorcollege@gmail.com
+         </p>
+         <p class="text-white">
+            vedantha.iqac@gmail.com
+           </p>
+        </div>
+        <!-- Location -->
+        <div>
+         <h2 class="text-yellow-400 text-xl font-bold mb-4">
+          Location
+         </h2>
+         <div class="mb-4">
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15110.522784986668!2d83.40249279708716!3d18.77002591164972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3b772d4b352d4d%3A0xbbd10b5cec7496a4!2svedantha%20college!5e0!3m2!1sen!2sin!4v1740546905843!5m2!1sen!2sin" 
+            width="300" 
+            height="250" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>         </div>
+         <button class="bg-yellow-500 text-blue-900 font-bold py-2 px-4 rounded">
+          HOW TO REACH US
+         </button>
+        </div>
+       </div>
+       <div class="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-400">
+        <p>
+         © 2025 Vedantha Junior College | IIT-NEET Academy | Made with
+         <i class="fas fa-heart text-red-500">
+         </i>
+         by Kumarswami Jakku(Vedantian)
+        </p>
+        
+       </div>
+      </div>
+     </footer>
+    </body>
+   </html>
+   
+        
+   
+  </body>
+ </html>
+ 

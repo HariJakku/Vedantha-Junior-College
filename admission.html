@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title >Vedantha Junior College</title>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            menu.classList.toggle("hidden");
+            if (menu.classList.contains("hidden")) {
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            } else {
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+            }
+        }
+
+        document.addEventListener("click", function(event) {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.add("hidden");
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            }
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    
+</head>
+<body class="bg-gray-100">
+
+    <!-- Latest News Bar -->
+    <div class="bg-yellow-500 text-black text-sm py-1 px-4">
+        <marquee> BELIEVE IN VEDANTHA: To Shape Up the Future Torch Bearers </marquee>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white">
+        <div class="container mx-auto flex flex-col items-center py-4">
+            <div class="flex items-center space-x-4">
+                <img alt="College Logo"  class="h-20 w-20  rounded mr-4" src="vedlogo.jpg"/>
+                <div class="text-center">
+                    <h1 class="text-2xl font-bold">VEDANTHA JUNIOR COLLEGE</h1>
+                    <h2 class="text-xl font-bold">IIT-NEET Academy</h2>
+                    <p class="text-sm">Church Street, Parvathipuram-535501. (R.C. No.03073/C24/Academic/2020) College Code: 03073</p>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-blue-800 text-white p-4 flex justify-between items-center relative">
+        <div class="flex space-x-4 text-sm">
+            <a class="hover:underline" href="index.html">ABOUT US</a>
+            <a class="hover:underline" href="faculty.html">FACULTY</a>
+            <a class="hover:underline" href="admission.html">ADMISSIONS</a>
+            <a class="hover:underline" href="gallery.html">GALLERY</a>
+            <a class="hover:underline" href="alumni.html">ALUMNI</a>
+        </div>
+
+        <!-- Hamburger / Close Menu Icon -->
+        <i id="menu-icon" class="fa fa-bars text-2xl cursor-pointer" onclick="toggleMenu()"></i>
+    </nav>
+
+    <!-- Dropdown Menu -->
+    <ul id="menu" class="hidden absolute right-4  bg-blue-800 text-white w-40 mt-2 py-2 shadow-md text-center rounded-lg">
+        <li class="p-3 hover:bg-gray-600"><a href="gallery.html">Gallery</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="elib.html">E-Library</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="events.html">Events</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="features.html">Features</a></li>
+        
+    </ul>
+
+<!--ADMISSION FORM-->
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+<center>
+
+    <body class="bg-gray-100 flex justify-center items-center min-h-screen">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full">
+            <div class="visme_d" data-title="Vedantha Admission Form" data-url="mx0jrox8-vedantha-admission-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="117526"></div>
+            <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+</center>
+</body>
+
+</html>

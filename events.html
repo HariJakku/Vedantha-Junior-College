@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title >Vedantha Junior College</title>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            menu.classList.toggle("hidden");
+            if (menu.classList.contains("hidden")) {
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            } else {
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+            }
+        }
+
+        document.addEventListener("click", function(event) {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.add("hidden");
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            }
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Latest News Bar -->
+    <div class="bg-yellow-500 text-black text-sm py-1 px-4">
+        <marquee> BELIEVE IN VEDANTHA: To Shape Up the Future Torch Bearers </marquee>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white">
+        <div class="container mx-auto flex flex-col items-center py-4">
+            <div class="flex items-center space-x-4">
+                <img alt="College Logo" class="h-20 w-20 rounded mr-4" src="vedlogo.jpg"/>
+                <div class="text-center">
+                    <h1 class="text-2xl font-bold">VEDANTHA JUNIOR COLLEGE</h1>
+                    <h2 class="text-xl font-bold">IIT-NEET Academy</h2>
+                    <p class="text-sm">Church Street, Parvathipuram-535501. (R.C. No.03073/C24/Academic/2020) College Code: 03073</p>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-blue-800 text-white p-4 flex justify-between items-center relative">
+        <div class="flex space-x-4 text-sm">
+            <a class="hover:underline" href="index.html">ABOUT US</a>
+            <a class="hover:underline" href="faculty.html">FACULTY</a>
+            <a class="hover:underline" href="admission.html">ADMISSIONS</a>
+            <a class="hover:underline" href="gallery.html">GALLERY</a>
+            <a class="hover:underline" href="alumni.html">ALUMNI</a>
+        </div>
+
+        <!-- Hamburger / Close Menu Icon -->
+        <i id="menu-icon" class="fa fa-bars text-2xl cursor-pointer" onclick="toggleMenu()"></i>
+    </nav>
+
+    <!-- Dropdown Menu -->
+    <ul id="menu" class="hidden absolute right-4  bg-blue-800 text-white w-40 mt-2 py-2 shadow-md text-center rounded-lg">
+        <li class="p-3 hover:bg-gray-600"><a href="gallery.html">Gallery</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="elib.html">E-Library</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="events.html">Events</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="features.html">Features</a></li>
+        
+    </ul>
+
+ <body class="bg-gray-100">
+<!-- Main Content -->
+  <main class="container mx-auto mt-4 p-4">
+   <h1 class="text-3xl font-semibold text-center mb-6">
+     Events
+   </h1>
+   <div class="space-y-4">
+     <!-- Event Card -->
+     <div class="flex bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="bg-teal-700 text-white p-4 flex flex-col items-center justify-center">
+         <span class="text-sm">
+          Tuesday
+         </span>
+         <span class="text-2xl font-bold">
+          25
+         </span>
+         <span class="text-sm">
+          Feb 2025
+         </span>
+        </div>
+        <div class="p-4">
+         <h2 class="text-teal-700 font-semibold">
+           VEDANTHA VEDOTSAV-II  FAREWELL DAY CELEBRATIONS- 2025
+         </h2>
+         <p class="text-gray-600">
+           Outcome: To celebrate cherished memories, bid adieu with gratitude, and embrace a future full of possibilities!
+          </p>
+         <p class="text-gray-600">
+          Venue: Lions Kalyana Mandapam
+         </p>
+         
+        </div>
+       </div>
+     <!-- Event Card -->
+     <div class="flex bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="bg-teal-700 text-white p-4 flex flex-col items-center justify-center">
+         <span class="text-sm">
+          Friday
+         </span>
+         <span class="text-2xl font-bold">
+          10
+         </span>
+         <span class="text-sm">
+          Jan 2025
+         </span>
+        </div>
+        <div class="p-4">
+         <h2 class="text-teal-700 font-semibold">
+           SANKRANTHI SAMBARALU -2025
+         </h2>
+         <p class="text-gray-600">
+           Outcome: A joyful celebration of culture, unity, and traditions, bringing happiness and togetherness to all!
+          </p>
+         <p class="text-gray-600">
+          Venue: Vedantha Junior College
+         </p>
+         
+        </div>
+       </div>
+
+       <!-- Event Card -->
+
+       <div class="flex bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="bg-teal-700 text-white p-4 flex flex-col items-center justify-center">
+         <span class="text-sm">
+          Monday
+         </span>
+         <span class="text-2xl font-bold">
+          09
+         </span>
+         <span class="text-sm">
+          Sep 2024
+         </span>
+        </div>
+        <div class="p-4">
+         <h2 class="text-teal-700 font-semibold">
+           TEACHERS DAY CELEBRATIONS 2024
+         </h2>
+         <p class="text-gray-600">
+           Outcome: To instill moral and tradition among students by honouring their teachers and mentors
+          </p>
+         <p class="text-gray-600">
+           Venue: Vedantha Junior College
+         </p>
+        
+        </div>
+       </div>
+    <!-- Event Card -->
+    <div class="flex bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="bg-teal-700 text-white p-4 flex flex-col items-center justify-center">
+       <span class="text-sm">
+        Saturday
+       </span>
+       <span class="text-2xl font-bold">
+        17
+       </span>
+       <span class="text-sm">
+        Aug 2024
+       </span>
+      </div>
+      <div class="p-4">
+       <h2 class="text-teal-700 font-semibold">
+         VEDANTHA VEDOTSAV-I  FRESHERS DAY CELEBRATIONS- 2024
+       </h2>
+       <p class="text-gray-600">
+         Outcome: To inspire new aspirants and rejoice in achievements, fostering growth, ambition, and success!
+        </p>
+       <p class="text-gray-600">
+        Venue: Lions Kalyana Mandapam
+       </p>
+       
+      </div>
+     </div>
+    <!-- Event Card -->
+    <div class="flex bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="bg-teal-700 text-white p-4 flex flex-col items-center justify-center">
+       <span class="text-sm">
+        Saturday
+       </span>
+       <span class="text-2xl font-bold">
+        10
+       </span>
+       <span class="text-sm">
+        Aug 2024
+       </span>
+      </div>
+      <div class="p-4">
+       <h2 class="text-teal-700 font-semibold">
+         PARENT TEACHER MEETING - I
+       </h2>
+       <p class="text-gray-600">
+        Outcome: Adaptive Academic Schedule Implementation
+       </p>
+       <p class="text-gray-600">
+         Venue: Vedantha Junior College
+        </p>
+      </div>
+     </div>
+    <!-- Event Card -->
+    <div class="flex bg-white shadow-md rounded-lg overflow-hidden">
+     <div class="bg-teal-700 text-white p-4 flex flex-col items-center justify-center">
+      <span class="text-sm">
+       Saturday
+      </span>
+      <span class="text-2xl font-bold">
+       27
+      </span>
+      <span class="text-sm">
+       July 2024
+      </span>
+     </div>
+     <div class="p-4">
+      <h2 class="text-teal-700 font-semibold">
+        NALSA AWARENESS CAMPAIGN  DISTINGUISHED GUESTS for V-2 & V-1
+      </h2>
+      <p class="text-gray-600">
+       By Shri. S. DAMODAR RAO GARU ,Shri. J.SOMYA JOSPHINE GARU,Shri. G.VENKATA RAO GARU
+      </p>
+      <p class="text-gray-600">
+       Venue : Vedantha Junior College 
+      </p>
+     </div>
+    </div>
+    
+   </div>
+  </main>
+ </body>
+</html>

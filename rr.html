@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line by Line Animation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <style>
+        .animated-text span {
+            display: block; /* Each line appears as a block for animation */
+            margin-bottom: 5px; /* Adjust spacing */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="animated-text">
+        <span data-aos="fade-up" data-aos-delay="100">This is the first line of the paragraph.</span>
+        <span data-aos="fade-up" data-aos-delay="300">Here comes the second line with animation.</span>
+        <span data-aos="fade-up" data-aos-delay="500">The third line appears with a smooth effect.</span>
+        <span data-aos="fade-up" data-aos-delay="700">And finally, the last line animates in.</span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: true
+        });
+    </script>
+
+</body>
+</html>

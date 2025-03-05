@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title >Vedantha Junior College</title>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            menu.classList.toggle("hidden");
+            if (menu.classList.contains("hidden")) {
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            } else {
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+            }
+        }
+
+        document.addEventListener("click", function(event) {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.add("hidden");
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            }
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Latest News Bar -->
+    <div class="bg-yellow-500 text-black text-sm py-1 px-4">
+        <marquee> BELIEVE IN VEDANTHA: To Shape Up the Future Torch Bearers </marquee>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white">
+        <div class="container mx-auto flex flex-col items-center py-4">
+            <div class="flex items-center space-x-4">
+                <img alt="College Logo" class="h-20 w-20 rounded mr-4" src="vedlogo.jpg"/>
+                <div class="text-center">
+                    <h1 class="text-2xl font-bold">VEDANTHA JUNIOR COLLEGE</h1>
+                    <h2 class="text-xl font-bold">IIT-NEET Academy</h2>
+                    <p class="text-sm">Church Street, Parvathipuram-535501. (R.C. No.03073/C24/Academic/2020) College Code: 03073</p>
+                </div>
+               
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-blue-800 text-white p-4 flex justify-between items-center relative">
+        <div class="flex space-x-4 text-sm">
+            <a class="hover:underline" href="index.html">ABOUT US</a>
+            <a class="hover:underline" href="faculty.html">FACULTY</a>
+            <a class="hover:underline" href="admission.html">ADMISSIONS</a>
+            <a class="hover:underline" href="gallery.html">GALLERY</a>
+            <a class="hover:underline" href="alumni.html">ALUMNI</a>
+        </div>
+
+        <!-- Hamburger / Close Menu Icon -->
+        <i id="menu-icon" class="fa fa-bars text-2xl cursor-pointer" onclick="toggleMenu()"></i>
+    </nav>
+
+    <!-- Dropdown Menu -->
+    <ul id="menu" class="hidden absolute right-4  bg-blue-800 text-white w-40 mt-2 py-2 shadow-md text-center rounded-lg">
+        <li class="p-3 hover:bg-gray-600"><a href="gallery.html">Gallery</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="elib.html">E-Library</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="events.html">Events</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="features.html">Features</a></li>
+       
+    </ul>
+
+    
+
+
+    <body>
+
+        <!-- About Us Section -->
+        <main class="container mx-auto py-8 px-6">
+            <h1 class="text-2xl font-bold text-left mb-6 text-blue-900 mb-4">SALIENT FEATURES OF VEDANTHA:</h1>
+            <p class="text-lg text-gray-700 text-center mb-6">Vedantha Junior College provides quality education with
+                well-planned study materials, domain-wise weekly tests, and specialized coaching for JEE and NEET
+                aspirants.
+            </p>
+            <ul class="list-disc px-8 text-gray-700">
+                <li>Pre-planned Study Material</li>
+                <li>Domain Wise Weekly Tests</li>
+                <li>AC Classrooms for JEE and NEET Students</li>
+                <li>CC Camera Surveillance</li>
+                <li>Special Attention for Slow Learners</li>
+                <li>Separate Hostel Facilities for Boys and Girls</li>
+            </ul>
+        </main>
+
+        <!-- Courses Section -->
+        <section class="container mx-auto py-8 px-6">
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Courses Content Section -->
+                <div>
+                    <h2 class="text-2xl font-bold text-left mb-6 text-blue-900">COURSES WE OFFER</h2>
+                    <ul class="list-disc px-8 text-gray-700 space-y-6">
+                        <li>
+                            <h3 class="text-xl font-semibold text-black">IIT-JEE-MAIN & ADVANCE:</h3>
+                            <h3 class="text-xl font-bold text-yellow-500 mb-2">--VAARAHI Track--</h3>
+                            <ul class="list-inside">
+                                <li>1. Practice of 20,000 Objective Questions</li>
+                                <li>2. 50 IIT JEE-MAIN & Advance, IPE, EAPCET Grand Tests</li>
+                                <li>3. Limited Seats & Unlimited Teaching</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="text-xl font-semibold text-black">NEET</h3>
+                            <h3 class="text-xl font-bold text-yellow-500 mb-2">--VAIDYA Track--</h3>
+                            <ul class="list-inside">
+                                <li>1. Practice of 20,000 Objective Questions</li>
+                                <li>2. 50 NEET Pattern & 50 IPE Weekly Exams</li>
+                                <li>3. IPE, EAPCET & NEET Grand Tests</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="text-xl font-semibold text-black">EAPCET & Other State Engg. Entrance Exams:</h3>
+                            <h3 class="text-xl font-bold text-yellow-500 mb-2">--VAJRA Track--</h3>
+                            <ul class="list-inside">
+                                <li>1. Practice of 10,000 Objective Questions</li>
+                                <li>2. 50 IPE & 25 EAPCET Weekly Exams</li>
+                                <li>3. BITSAT Preparation & Grand Tests</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3 class="text-xl font-semibold text-black">Intermediate Public Examinations (IPE):</h3>
+                            <h3 class="text-xl font-bold text-yellow-500 mb-2">--VEERA Track--</h3>
+                            <ul class="list-inside">
+                                <li>1. Practice of 5,000 Objective Questions</li>
+                                <li>2. IPE Preparation as per Blueprint Strategy</li>
+                                <li>3. 50 IPE Weekly Exams, EAPCET & Grand Tests</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Image Section -->
+                <div class="flex justify-center lg:justify-end">
+                    <img alt="courses" class="mb-2" height="600" width="600"
+                        src="img/course.jpg" />
+                </div>
+            </div>
+        </section>
+
+
+
+    </body>
+
+</html>

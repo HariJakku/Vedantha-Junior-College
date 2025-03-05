@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title >Vedantha Junior College</title>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            menu.classList.toggle("hidden");
+            if (menu.classList.contains("hidden")) {
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            } else {
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+            }
+        }
+
+        document.addEventListener("click", function(event) {
+            let menu = document.getElementById("menu");
+            let menuIcon = document.getElementById("menu-icon");
+            
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.add("hidden");
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            }
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Latest News Bar -->
+    <div class="bg-yellow-500 text-black text-sm py-1 px-4">
+        <marquee> BELIEVE IN VEDANTHA: To Shape Up the Future Torch Bearers </marquee>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white">
+        <div class="container mx-auto flex flex-col items-center py-4">
+            <div class="flex items-center space-x-4">
+                <img alt="College Logo" class="h-20 w-20 rounded mr-4" src="vedlogo.jpg"/>
+                <div class="text-center">
+                    <h1 class="text-2xl font-bold">VEDANTHA JUNIOR COLLEGE</h1>
+                    <h2 class="text-xl font-bold">IIT-NEET Academy</h2>
+                    <p class="text-sm">Church Street, Parvathipuram-535501. (R.C. No.03073/C24/Academic/2020) College Code: 03073</p>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-blue-800 text-white p-4 flex justify-between items-center relative">
+        <div class="flex space-x-4 text-sm">
+            <a class="hover:underline" href="index.html">ABOUT US</a>
+            <a class="hover:underline" href="faculty.html">FACULTY</a>
+            <a class="hover:underline" href="admission.html">ADMISSIONS</a>
+            <a class="hover:underline" href="gallery.html">GALLERY</a>
+            <a class="hover:underline" href="alumni.html">ALUMNI</a>
+        </div>
+
+        <!-- Hamburger / Close Menu Icon -->
+        <i id="menu-icon" class="fa fa-bars text-2xl cursor-pointer" onclick="toggleMenu()"></i>
+    </nav>
+
+    <!-- Dropdown Menu -->
+    <ul id="menu" class="hidden absolute right-4  bg-blue-800 text-white w-40 mt-2 py-2 shadow-md text-center rounded-lg">
+        <li class="p-3 hover:bg-gray-600"><a href="gallery.html">Gallery</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="elib.html">E-Library</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="events.html">Events</a></li>
+        <li class="p-3 hover:bg-gray-600"><a href="features.html">Features</a></li>
+        
+    </ul>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+
+
+    
+    <!-- Tabs -->
+    <div class="container mx-auto p-6">
+        <div class="flex justify-center space-x-4 mb-4">
+            <button class="tab-btn bg-yellow-500 text-white font-bold py-2 px-4 rounded" onclick="showSection('admin')">Administration</button>
+            <button class="tab-btn bg-yellow-500 text-white font-bold py-2 px-4 rounded" onclick="showSection('sl')">Sr.Lecturers</button>
+            <button class="tab-btn bg-yellow-500 text-white font-bold py-2 px-4 rounded" onclick="showSection('jl')">Support Staff</button>
+            <button class="tab-btn bg-yellow-500 text-white font-bold py-2 px-4 rounded" onclick="showSection('gl')">Guest Faculty</button>
+            
+        </div>
+    
+        <!-- Sections -->
+         <!--admin section-->
+        <div id="admin" class="content-section bg-white shadow-md rounded-lg p-4">
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/apparao.jpg" alt="Portrait of Dr.Penta Apparao" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Dr.Penta Apparao</h3>
+                        <p class="text-gray-700 font-bold ">Cheif Mentor</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C), M.Sc.(Physics), M.Phil., Ph.D.</p>
+                        <p class="text-gray-700">Experience: 30+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/sln.jpg" alt="Portrait of Shri Lakshmunaidu Sristu" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Lakshmunaidu Sristu</h3>
+                        <p class="text-gray-700 font-bold ">Director &amp; Principal</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C), M.Sc.(Maths)</p>
+                        <p class="text-gray-700">Experience: 26+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/ramanababu.jpg" alt="Portrait of Shri.P V Ramana Babu" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri.Venkata Ramana Babu Pappala</h3>
+                        <p class="text-gray-700 font-bold ">Academic Dean</p>
+                        <p class="text-gray-700">Qualification: B.Com., M.A.(English), B.Ed.</p>
+                        <p class="text-gray-700">Experience: 29+ years</p>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/ENGLOKESH.jpg" alt="Portrait of Shri.N. Lokesh" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri.Lokesh Nelli</h3>
+                        <p class="text-gray-700 font-bold ">Vice Principal(1st Year)</p>
+                        <p class="text-gray-700">Qualification: B.A.(E.P.C.), M.A.(Eng), B.Ed, B.Li.Sc.</p>
+                        <p class="text-gray-700">Experience: 14+ years</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/ramarao.jpg" alt="Portrait of Shri S.Rama Rao" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Rama Rao Saripalli</h3>
+                        <p class="text-gray-700 font-bold ">Vice Principal (2nd Year)</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C.), MSc.(Maths), B.Ed.</p>
+                        <p class="text-gray-700">Experience: 13+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri G. Venkat Naidu</h3>
+                        <p class="text-gray-700 font-bold">Sr. Assistant</p>
+                        <p class="text-gray-700"> </p>
+                       
+                    </div>
+                </div>
+            </div>
+           
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri L.Padmaja</h3>
+                        <p class="text-gray-700 font-bold">Office Assistant</p>
+                        <p class="text-gray-700"> </p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Chandra Sekhar Nandivada</h3>
+                        <p class="text-gray-700 font-bold">Adminstrative Officer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!--sl section-->
+        
+        <div id="sl" class="content-section hidden bg-white shadow-md rounded-lg p-4">
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/ramanababu.jpg" alt="Portrait of Shri.P V Ramana Babu" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri.Venkata Ramana Babu Pappala</h3>
+                        <p class="text-gray-700 font-bold ">Department of English</p>
+                        <p class="text-gray-700">Qualification: B.Com., M.A.(English), B.Ed.</p>
+                        <p class="text-gray-700">Experience: 29+ years</p>
+                       
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/ENGLOKESH.jpg" alt="Portrait of Shri.N. Lokesh" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri.Lokesh Nelli</h3>
+                        <p class="text-gray-700 font-bold ">Department of English</p>
+                        <p class="text-gray-700">Qualification: B.A.(E.P.C.), M.A.(Eng), B.Ed, B.Li.Sc.</p>
+                        <p class="text-gray-700">Experience: 14+ years</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <!--sanskrit-->
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/SANJEEV.jpg" alt="Portrait of Shri. P. Sanjeev" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri. P. Sanjeev</h3>
+                        <p class="text-gray-700 font-bold ">Sr.Faculty - Sanskrit</p>
+                        <p class="text-gray-700">Qualification: B.A.(Sanskrit), M.A.(Sanskrit), T.P.T.</p>
+                        <p class="text-gray-700">Experience: 13+ years</p>
+                    </div>
+                </div>
+            </div>
+            <!--maths-->
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/sln.jpg" alt="Portrait of Shri Lakshmunaidu Sristu" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Lakshmunaidu Sristu</h3>
+                        <p class="text-gray-700 font-bold ">Department of Mathematics</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C), M.Sc.(Maths)</p>
+                        <p class="text-gray-700">Experience: 26+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/ramarao.jpg" alt="Portrait of Shri S.Rama Rao" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Rama Rao Saripalli</h3>
+                        <p class="text-gray-700 font-bold ">Department of Mathematics</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C.), MSc.(Maths), B.Ed.</p>
+                        <p class="text-gray-700">Experience: 13+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/MATHSKRISHNA.jpg" alt="Portrait of Shri A.Krishna" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Krishna Adapaka</h3>
+                        <p class="text-gray-700 font-bold ">Department of Mathematics</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C.)., M.Sc.(Maths), B.Ed</p>
+                        <p class="text-gray-700">Experience: 10+ years</p>
+                    </div>
+                </div>
+            </div>
+            <!--physics -->
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/apparao.jpg" alt="Portrait of Dr.Penta Apparao" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Dr.Penta Apparao</h3>
+                        <p class="text-gray-700 font-bold ">Department of Phyics</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C), M.Sc.(Physics), M.Phil., Ph.D.</p>
+                        <p class="text-gray-700">Experience: 30+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/PHYCHARI.jpg" alt="pic" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Vivekanand Vemakoti</h3>
+                        <p class="text-gray-700 font-bold ">Department of Physics</p>
+                        <p class="text-gray-700">Qualification: B.Tech(ECE), M.Tech (VLSI & ES), MBA (SM), MA (Eng)</p>
+                        <p class="text-gray-700">Experience: 8+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Devi" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Tejasri Buri</h3>
+                        <p class="text-gray-700 font-bold ">Department of Physics</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C.), M.Sc.(Physics)</p>
+                        <p class="text-gray-700">Experience: 2+ years</p>
+                    </div>
+                </div>
+            </div>
+            <!--chemistry-->
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/rk.jpg" alt="Portrait of RK " class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Ramakrishnachari Turupati</h3>
+                        <p class="text-gray-700 font-bold ">Department of Chemistry</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C), M.Sc.(Chemistry)</p>
+                        <p class="text-gray-700">Experience: 17+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/TIRUPATHI RAO DTR.jpg" alt="DTR" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Tirupathi Rao Dubbireddi</h3>
+                        <p class="text-gray-700 font-bold ">Department of Chemistry</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C.), M.Sc.(Chemistry),B.Ed</p>
+                        <p class="text-gray-700">Experience: 14+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/SUDHAKARBIO.jpg" alt="Portrait " class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Sudhakar</h3>
+                        <p class="text-gray-700 font-bold ">Department of Botany</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(C.B.Z.), MSc (Botany), B.Ed, T.E.T. Qualified</p>
+                        <p class="text-gray-700">Experience: 10+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/BIOPAVAN.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Pawan Kumar</h3>
+                        <p class="text-gray-700 font-bold ">Department of Zoology</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(Chemistry), M.Sc.(BioChemistry)</p>
+                        <p class="text-gray-700">Experience: 10+ years</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!--jl section-->
+        
+        <div id="jl" class="content-section hidden bg-white shadow-md rounded-lg p-4">
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait of Shri Ganesh Nandivada" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Ganesh Nandivada</h3>
+                        <p class="text-gray-700 font-bold ">Department of Maths</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(Computers)</p>
+                        <p class="text-gray-700">Experience: 10+ years</p>
+                    </div>
+                </div>
+             </div>
+             <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Sankara Rao Pudi</h3>
+                        <p class="text-gray-700 font-bold ">Department of Maths</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C)</p>
+                        <p class="text-gray-700">Experience: 7 years</p>
+                    </div>
+                </div>
+             </div>
+             <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Sandhya Dadi</h3>
+                        <p class="text-gray-700 font-bold ">Department of Maths</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(Computers)</p>
+                        <p class="text-gray-700">Experience: 2+ year</p>
+                    </div>
+                </div>
+             </div>
+             <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Swathi Buri</h3>
+                        <p class="text-gray-700 font-bold ">Department of Maths</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(Computers)</p>
+                        <p class="text-gray-700">Experience: 2+ years</p>
+                    </div>
+                </div>
+             </div>
+             <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Tejasri" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri G.Anusha</h3>
+                        <p class="text-gray-700 font-bold ">Department of Maths</p>
+                        <p class="text-gray-700">Qualification:B.Sc.(Computers)</p>
+                        <p class="text-gray-700">Experience: 2+ years</p>
+                    </div>
+                </div>
+             </div>
+             <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Kavya" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Kavya Rokkam</h3>
+                        <p class="text-gray-700 font-bold ">Department of Physics</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.C.)</p>
+                        <p class="text-gray-700">Experience: 3+ years</p>
+                    </div>
+                </div>
+             </div>
+             
+             <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Poorna" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Poorna Lakshmi Ruttala</h3>
+                        <p class="text-gray-700 font-bold ">Department of Chemistry</p>
+                        <p class="text-gray-700">Qualification: M.Sc.(Chemistry)</p>
+                        <p class="text-gray-700">Experience: 3+ years</p>
+                    </div>
+                </div>
+             </div>
+             <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="IMG/vedlogo.jpg" alt="Divya" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Divya Sai Kota</h3>
+                        <p class="text-gray-700 font-bold ">Department of Chemistry</p>
+                        <p class="text-gray-700">Qualification: M.Sc.(Chemistry)</p>
+                        <p class="text-gray-700">Experience: 2+ years</p>
+                    </div>
+                </div>
+             </div>
+             
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri S. Tirupathi Rao</h3>
+                        <p class="text-gray-700 font-bold">Promoter</p>
+                        <p class="text-gray-700">Qualification: M.A English</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri M. Goutham</h3>
+                        <p class="text-gray-700 font-bold">Promoter</p>
+                        <p class="text-gray-700">Qualification: M.Tech</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--gl section-->
+        <div id="gl" class="content-section hidden bg-white shadow-md rounded-lg p-4">
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Srinivasa Rao Ch</h3>
+                        <p class="text-gray-700 font-bold">Department of Chemistry</p>
+                        <p class="text-gray-700">Qualification: B.Sc., M.Sc., B.Ed.</p>
+                        <p class="text-gray-700">Experience: 25+ years</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait of Shri Pydi Raju" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Pydi Raju</h3>
+                        <p class="text-gray-700 font-bold">Department of Physics</p>
+                        <p class="text-gray-700">Qualification: B.Sc.(M.P.Cs.), MSc(Physics), B.Ed,</p>
+                        <p class="text-gray-700">Experience: 16+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Ranga Rao</h3>
+                        <p class="text-gray-700 font-bold">Department of Botany</p>
+                        <p class="text-gray-700">Qualification: B.Sc., M.Sc., B.Ed.</p>
+                        <p class="text-gray-700">Experience: 14+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Sankar Rao</h3>
+                        <p class="text-gray-700 font-bold">Department of Physics</p>
+                        <p class="text-gray-700">Qualification: B.Sc., M.Sc., B.Ed.</p>
+                        <p class="text-gray-700">Experience: 14+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Ravi D</h3>
+                        <p class="text-gray-700 font-bold">Department of Zoology</p>
+                        <p class="text-gray-700">Qualification: B.Sc., M.Sc., B.Ed.</p>
+                        <p class="text-gray-700">Experience: 22+ years</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--nts section--
+        <div id="nts" class="content-section hidden bg-white shadow-md rounded-lg p-4">
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri G. Venkat Naidu</h3>
+                        <p class="text-gray-700 font-bold">Sr. Assistant</p>
+                        <p class="text-gray-700"> </p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri Chandra Sekhar Nandivada</h3>
+                        <p class="text-gray-700 font-bold">Adminstrative Officer</p>
+
+                        <p class="text-gray-700">Qualification: B.Sc., M.Sc. (Zoology)</p>
+                        <p class="text-gray-700">Experience: 4+ years</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri L.Padmaja</h3>
+                        <p class="text-gray-700 font-bold">Office Assistant</p>
+                        <p class="text-gray-700">Qualification: - </p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri S. Tirupathi Rao</h3>
+                        <p class="text-gray-700 font-bold">Promoter</p>
+                        <p class="text-gray-700">Qualification: M.A English</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4 mb-4">
+                <div class="flex items-center">
+                    <img src="img/vedlogo.jpg" alt="Portrait" class="w-24 h-24 rounded-full mr-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-900">Shri M. Goutham</h3>
+                        <p class="text-gray-700 font-bold">Promoter</p>
+                        <p class="text-gray-700">Qualification: M.Tech</p>
+                       
+                    </div>
+                </div>
+            </div>-->
+            
+
+        </div>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
